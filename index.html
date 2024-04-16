@@ -59,7 +59,7 @@
                                 class="text-[#1DD100]"><br>P Paribahan</span></h1>
                         <p class="mb-5 font-inter">Yes, you can run unit tests and view the results directly within the
                             app. The <br> integrated testing features allow for a streamlined .</p>
-                        <button class="btn px-8 border-none rounded-lg bg-[#1DD100] text-xl font-bold">Buy
+                        <button onclick="specificPosition()" class="btn px-8 border-none rounded-lg bg-[#1DD100] text-xl font-bold">Buy
                             Tickets</button>
                     </div>
                 </div>
@@ -142,7 +142,7 @@
         </section>
 
     </header>
-    <main class="border-t-2 rounded-t-3xl border-[#1DD100] mt-28 bg-[#F7F8F8      ]">
+    <main id="main" class="border-t-2 rounded-t-3xl border-[#1DD100] mt-28 bg-[#F7F8F8]">
         <section class="max-w-screen-xl mx-auto">
             <h1 class="text-4xl font-bold mt-28 text-center ">P.H Paribahan</h1>
             <p class="mt-5 text-center">Yes, you can run unit tests and view the results directly within the app. The integrated <br> testing features allow for a streamlined .</p>
@@ -191,9 +191,201 @@
                     <p class="text-2xl font-semibold text-[#03071299]">Per Seat</p>
                 </div>
             </div>
+
+            <!--  -->
+            <div class="mt-10 p-8 bg-white rounded-3xl flex gap-8">
+                <!-- 1st  -->
+                <div class="w-3/5">
+                    <h3 class="text-2xl font-semibold border-b-2 border-dashed pb-4 border-[#03071233]">Select Your Seat</h3>
+                    <div class="flex justify-between mt-5 border-b-2 border-dashed pb-4 border-[#03071233]">
+                      <div class="flex gap-2">
+                        <img src="images/seat-gray.png" alt="">
+                        <p>Available</p>
+                      </div>
+                      <div class="flex gap-2">
+                        <img src="images/seat-green.png" alt="">
+                        <p class="text-[#1DD100]">Selected</p>
+                      </div>
+                    </div>
+
+                    <div>
+                        <!--  -->
+                        <div class="flex justify-end gap-1 mt-6 my-1 w-full">
+                            <kbd class="kbd rounded-xl bg-[#03071226]"><img class="px-4 py-1" src="images/steering-wheel.svg" alt=""></kbd>
+                          </div> 
+                          <!-- a -->
+                        <div class="flex justify-between gap-8 mt-6 my-1 w-full">
+                            <kbd class="">A</kbd>
+                            <kbd id="A1" class="kbd rounded-xl px-5 py-1  bg-[#F7F8F8]">A1</kbd>
+                            <kbd id="A2" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">A2</kbd>
+                            <kbd id="A3" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">A3</kbd>
+                            <kbd id="A4" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">A4</kbd>
+                          </div> 
+                          <!-- b --> 
+                        <div class="flex justify-between gap-8 mt-6 my-1 w-full">
+                            <kbd class="">B</kbd>
+                            <kbd id="B1" class="kbd rounded-xl px-5 py-1  bg-[#F7F8F8]">B1</kbd>
+                            <kbd id="B2" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">B2</kbd>
+                            <kbd id="B3" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">B3</kbd>
+                            <kbd id="B4" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">B4</kbd>
+                          </div> 
+                          <!-- c -->
+                        <div class="flex justify-between gap-8 mt-6 my-1 w-full">
+                            <kbd class="">C</kbd>
+                            <kbd id="C1" class="kbd rounded-xl px-5 py-1  bg-[#F7F8F8]">C1</kbd>
+                            <kbd id="C2" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">C2</kbd>
+                            <kbd id="C3" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">C3</kbd>
+                            <kbd id="C4" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">C4</kbd>
+                          </div> 
+                          <!-- d -->
+                        <div class="flex justify-between gap-8 mt-6 my-1 w-full">
+                            <kbd class="">D</kbd>
+                            <kbd id="D1" class="kbd rounded-xl px-5 py-1  bg-[#F7F8F8]">D1</kbd>
+                            <kbd id="D2" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">D2</kbd>
+                            <kbd id="D3" class="kbd rounded-xl px-5 py-1 bg-[#1DD100]">D3</kbd>
+                            <kbd id="D4" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">D4</kbd>
+                          </div> 
+                          <!-- e -->
+                        <div class="flex justify-between gap-8 mt-6 my-1 w-full">
+                            <kbd class="">E</kbd>
+                            <kbd id="E1" class="kbd rounded-xl px-5 py-1  bg-[#1DD100]">E1</kbd>
+                            <kbd id="E2" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">E2</kbd>
+                            <kbd id="E3" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">E3</kbd>
+                            <kbd id="E4" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">E4</kbd>
+                          </div> 
+                          <!-- f -->
+                        <div class="flex justify-between gap-8 mt-6 my-1 w-full">
+                            <kbd class="">F</kbd>
+                            <kbd id="F1" class="kbd rounded-xl px-5 py-1  bg-[#F7F8F8]">F1</kbd>
+                            <kbd id="F2" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">F2</kbd>
+                            <kbd id="F3" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">F3</kbd>
+                            <kbd id="F4" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">F4</kbd>
+                          </div> 
+                          <!-- g -->
+                        <div class="flex justify-between gap-8 mt-6 my-1 w-full">
+                            <kbd class="">G</kbd>
+                            <kbd id="G1" class="kbd rounded-xl px-5 py-1  bg-[#F7F8F8]">G1</kbd>
+                            <kbd id="G2" class="kbd rounded-xl px-5 py-1 bg-[#1DD100]">G2</kbd>
+                            <kbd id="G3" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">G3</kbd>
+                            <kbd id="G4" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">G4</kbd>
+                          </div> 
+                          <!-- h -->
+                        <div class="flex justify-between gap-8 mt-6 my-1 w-full">
+                            <kbd class="">H</kbd>
+                            <kbd id="H1" class="kbd rounded-xl px-5 py-1  bg-[#F7F8F8]">H1</kbd>
+                            <kbd id="H2"  class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">H2</kbd>
+                            <kbd id="H3"  class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">H3</kbd>
+                            <kbd id="H4"  class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">H4</kbd>
+                          </div> 
+                          <!-- i -->
+                        <div class="flex justify-between gap-8 mt-6 my-1 w-full">
+                            <kbd class="">I</kbd>
+                            <kbd id="I1" class="kbd rounded-xl px-5 py-1  bg-[#F7F8F8]">I1</kbd>
+                            <kbd id="I2" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">I2</kbd>
+                            <kbd id="I3" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">I3</kbd>
+                            <kbd id="I4" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">I4</kbd>
+                          </div> 
+                          <!-- j -->
+                        <div class="flex justify-between gap-8 mt-6 my-1 w-full">
+                            <kbd class="">J</kbd>
+                            <kbd id="J1" class="kbd rounded-xl px-5 py-1  bg-[#F7F8F8]">J1</kbd>
+                            <kbd id="J2" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">J2</kbd>
+                            <kbd id="J3" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">J3</kbd>
+                            <kbd id="J4" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">J4</kbd>
+                          </div> 
+                         
+                    </div>
+                </div>
+
+                <!-- 2nd -->
+                <div class="border-2 border-dashed border-[#0307124C]">
+                    
+                </div>
+
+                <!-- 3rd -->
+                <div class="">
+                    <h3 class="text-2xl font-semibold border-b-2 border-dashed pb-4 border-[#03071233]">Select Your Seat</h3>
+                    <div class="bg-[#F7F8F8] rounded-xl p-8 mt-6">
+                        <!-- table -->
+                        <table class="table">
+                            <!-- head -->
+                            <thead>
+                              <tr class="border-dashed">
+                                <th class="font-medium text-[#030712]">Seat<span class="bg-[#1DD100] rounded-xl px-2">2</span> </th>
+                                <th class="font-medium text-[#030712]">Class</th>
+                                <th class="font-medium text-[#030712]">Price</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <!-- row 1 -->
+                              <tr class="border-none">
+                                <td>C2</td>
+                                <td>Economoy</td>
+                                <td>550</td>
+                              </tr>
+                              <!-- row 2 -->
+                              <tr class="border-none">
+                                <td>C2</td>
+                                <td>Economoy</td>
+                                <td>550</td>
+                              </tr>
+                             
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td class="text-base font-medium text-[#030712]">Total Price</td>
+                                    <td></td>
+                                    <td class="text-base font-medium text-[#030712]">BDT 1100</td>
+                                </tr>
+                            </tfoot>
+                          </table>
+                          <label class="mt-4 input input-bordered flex items-center gap-2 bg-[#FFFFFF] rounded-xl">
+                            <input type="text" class="grow" placeholder="Have any copupon?" />
+                            <button class="badge px-6 py-4 text-white rounded-xl bg-[#1DD100]">Apply</button>
+                          </label>
+
+                          <div class="mt-6 flex justify-between px-4">
+                            <h4 class="font-medium">Grand Total</h4>
+                            <h4 class="font-medium">BDT 1100</h4>
+                          </div>
+                         
+                    </div>
+
+
+                    <!--  -->
+                    <div class="mt-6">
+                        <label class="form-control w-full">
+                            <div class="label">
+                              <span class="label-text text-base text-[#030712] font-semibold">Passenger Name*</span>
+                            </div>
+                            <input type="text" placeholder="Enter your name" class="input input-bordered mt-2 bg-white w-full  rounded-2xl" />
+                        </label>
+                        <label class="form-control w-full  mt-2">
+                            <div class="label">
+                              <span class="label-text text-base text-[#030712] font-semibold">Phone Number*</span>
+                            </div>
+                            <input type="number" placeholder="Enter your phone number" class="input input-bordered mt-2 bg-white w-full  rounded-2xl" />
+                        </label>
+
+                        <label class="form-control w-full  mt-2">
+                            <div class="label">
+                              <span class="label-text text-base text-[#030712] font-semibold">Email ID</span>
+                            </div>
+                            <input type="email" placeholder="Enter your email id" class="input input-bordered mt-2 bg-white w-full  rounded-2xl" />
+                        </label>
+                        <button class="mt-3 text-xl font-extrabold btn btn-block rounded-2xl text-white bg-[#1DD100]">Next</button>
+                        <div class="flex gap-10 justify-center mt-6">
+                            <a class="link link-neutral text-[#03071299]">Terms and Conditions</a>
+                            <a class="link link-neutral text-[#03071299]">Cancellation Policy</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
     <footer></footer>
+
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>         
