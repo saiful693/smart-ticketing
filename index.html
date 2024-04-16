@@ -6,11 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart Ticketing</title>
 
+ 
     <!-- tailwind and daisyUI cdn -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.1/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 
     <link rel="stylesheet" href="styles/style.css">
+
+    <!--  -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                greenMain: '#1DD100',
+              }
+            }
+          }
+        }
+      </script>
+
 </head>
 
 <body>
@@ -57,8 +72,7 @@
                     <div class="max-w-3xl">
                         <h1 class="mb-5 text-6xl font-extrabold text-white">End-to-End Travel with<span
                                 class="text-[#1DD100]"><br>P Paribahan</span></h1>
-                        <p class="mb-5 font-inter">Yes, you can run unit tests and view the results directly within the
-                            app. The <br> integrated testing features allow for a streamlined .</p>
+                        <p class="mb-5 font-inter">P Paribahan is a reputed name in the industry since 1984.P Paribahan is the king of the transport <br> world.  we have enhanced our service with "shohoz.com".</p>
                         <button onclick="specificPosition()" class="btn px-8 border-none rounded-lg bg-[#1DD100] text-xl font-bold">Buy
                             Tickets</button>
                     </div>
@@ -142,10 +156,10 @@
         </section>
 
     </header>
-    <main id="main" class="border-t-2 rounded-t-3xl border-[#1DD100] mt-28 bg-[#F7F8F8]">
+    <main id="main1" class="border-t-2 rounded-t-3xl border-[#1DD100] mt-28 bg-[#F7F8F8]">
         <section class="max-w-screen-xl mx-auto">
             <h1 class="text-4xl font-bold mt-28 text-center ">P.H Paribahan</h1>
-            <p class="mt-5 text-center">Yes, you can run unit tests and view the results directly within the app. The integrated <br> testing features allow for a streamlined .</p>
+            <p class="mt-5 text-center">Choose your origin, destination, journey dates and search for buses</p>
             <div class="mt-10  bg-white rounded-3xl flex gap-14 items-center">
                 <div class="flex-1">
                       <div class="flex justify-between p-8">
@@ -157,7 +171,7 @@
                                 </div>
                             </div>
                             <div>
-                                <a class="btn text-[#1DD100] border rounded-xl border-[#1dd10026] px-8 text-xl bg-[#1dd10026]"><img src="images/seat-green.png" alt="">40 Seats left</a>
+                                <a class="btn text-[#1DD100] border rounded-xl border-[#1dd10026] px-8 text-xl bg-[#1dd10026]"><img src="images/seat-green.png" alt=""><span id="total-seat">40</span> Seats left</a>
                             </div>
                       </div> 
                       <div class="bg-[#F7F8F8] rounded-3xl ml-8 p-8">
@@ -216,82 +230,82 @@
                           <!-- a -->
                         <div class="flex justify-between gap-8 mt-6 my-1 w-full">
                             <kbd class="">A</kbd>
-                            <kbd id="A1" class="kbd rounded-xl px-5 py-1  bg-[#F7F8F8]">A1</kbd>
-                            <kbd id="A2" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">A2</kbd>
-                            <kbd id="A3" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">A3</kbd>
-                            <kbd id="A4" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">A4</kbd>
+                            <kbd onclick="seatChoose('A1')" id="A1" class="kbd rounded-xl px-5 py-1  bg-[#F7F8F8]">A1</kbd>
+                            <kbd onclick="seatChoose('A2')" id="A2" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">A4</kbd>
+                            <kbd onclick="seatChoose('A3')" id="A3" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">A3</kbd>
+                            <kbd onclick="seatChoose('A4')" id="A4" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">A2</kbd>
                           </div> 
                           <!-- b --> 
                         <div class="flex justify-between gap-8 mt-6 my-1 w-full">
                             <kbd class="">B</kbd>
-                            <kbd id="B1" class="kbd rounded-xl px-5 py-1  bg-[#F7F8F8]">B1</kbd>
-                            <kbd id="B2" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">B2</kbd>
-                            <kbd id="B3" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">B3</kbd>
-                            <kbd id="B4" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">B4</kbd>
+                            <kbd onclick="seatChoose('B1')" id="B1" class="kbd rounded-xl px-5 py-1  bg-[#F7F8F8]">B1</kbd>
+                            <kbd onclick="seatChoose('B2')" id="B2" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">B2</kbd>
+                            <kbd onclick="seatChoose('B3')" id="B3" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">B3</kbd>
+                            <kbd onclick="seatChoose('B4')" id="B4" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">B4</kbd>
                           </div> 
                           <!-- c -->
                         <div class="flex justify-between gap-8 mt-6 my-1 w-full">
                             <kbd class="">C</kbd>
-                            <kbd id="C1" class="kbd rounded-xl px-5 py-1  bg-[#F7F8F8]">C1</kbd>
-                            <kbd id="C2" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">C2</kbd>
-                            <kbd id="C3" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">C3</kbd>
-                            <kbd id="C4" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">C4</kbd>
+                            <kbd onclick="seatChoose('C1')" id="C1" class="kbd rounded-xl px-5 py-1  bg-[#F7F8F8]">C1</kbd>
+                            <kbd onclick="seatChoose('C2')" id="C2" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">C2</kbd>
+                            <kbd onclick="seatChoose('C3')" id="C3" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">C3</kbd>
+                            <kbd onclick="seatChoose('C4')" id="C4" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">C4</kbd>
                           </div> 
                           <!-- d -->
                         <div class="flex justify-between gap-8 mt-6 my-1 w-full">
                             <kbd class="">D</kbd>
-                            <kbd id="D1" class="kbd rounded-xl px-5 py-1  bg-[#F7F8F8]">D1</kbd>
-                            <kbd id="D2" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">D2</kbd>
-                            <kbd id="D3" class="kbd rounded-xl px-5 py-1 bg-[#1DD100]">D3</kbd>
-                            <kbd id="D4" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">D4</kbd>
+                            <kbd onclick="seatChoose('D1')" id="D1" class="kbd rounded-xl px-5 py-1  bg-[#F7F8F8]">D1</kbd>
+                            <kbd onclick="seatChoose('D2')" id="D2" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">D2</kbd>
+                            <kbd onclick="seatChoose('D3')" id="D3" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">D3</kbd>
+                            <kbd onclick="seatChoose('D4')" id="D4" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">D4</kbd>
                           </div> 
                           <!-- e -->
                         <div class="flex justify-between gap-8 mt-6 my-1 w-full">
                             <kbd class="">E</kbd>
-                            <kbd id="E1" class="kbd rounded-xl px-5 py-1  bg-[#1DD100]">E1</kbd>
-                            <kbd id="E2" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">E2</kbd>
-                            <kbd id="E3" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">E3</kbd>
-                            <kbd id="E4" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">E4</kbd>
+                            <kbd onclick="seatChoose('E1')" id="E1" class="kbd rounded-xl px-5 py-1  bg-[#F7F8F8]">E1</kbd>
+                            <kbd onclick="seatChoose('E2')" id="E2" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">E2</kbd>
+                            <kbd onclick="seatChoose('E3')" id="E3" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">E3</kbd>
+                            <kbd onclick="seatChoose('E4')" id="E4" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">E4</kbd>
                           </div> 
                           <!-- f -->
                         <div class="flex justify-between gap-8 mt-6 my-1 w-full">
                             <kbd class="">F</kbd>
-                            <kbd id="F1" class="kbd rounded-xl px-5 py-1  bg-[#F7F8F8]">F1</kbd>
-                            <kbd id="F2" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">F2</kbd>
-                            <kbd id="F3" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">F3</kbd>
-                            <kbd id="F4" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">F4</kbd>
+                            <kbd onclick="seatChoose('F1')" id="F1" class="kbd rounded-xl px-5 py-1  bg-[#F7F8F8]">F1</kbd>
+                            <kbd onclick="seatChoose('F2')" id="F2" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">F2</kbd>
+                            <kbd onclick="seatChoose('F3')" id="F3" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">F3</kbd>
+                            <kbd onclick="seatChoose('F4')" id="F4" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">F4</kbd>
                           </div> 
                           <!-- g -->
                         <div class="flex justify-between gap-8 mt-6 my-1 w-full">
                             <kbd class="">G</kbd>
-                            <kbd id="G1" class="kbd rounded-xl px-5 py-1  bg-[#F7F8F8]">G1</kbd>
-                            <kbd id="G2" class="kbd rounded-xl px-5 py-1 bg-[#1DD100]">G2</kbd>
-                            <kbd id="G3" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">G3</kbd>
-                            <kbd id="G4" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">G4</kbd>
+                            <kbd onclick="seatChoose('G1')" id="G1" class="kbd rounded-xl px-5 py-1  bg-[#F7F8F8]">G1</kbd>
+                            <kbd onclick="seatChoose('G2')" id="G2" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">G2</kbd>
+                            <kbd onclick="seatChoose('G3')" id="G3" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">G3</kbd>
+                            <kbd onclick="seatChoose('G4')" id="G4" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">G4</kbd>
                           </div> 
                           <!-- h -->
                         <div class="flex justify-between gap-8 mt-6 my-1 w-full">
                             <kbd class="">H</kbd>
-                            <kbd id="H1" class="kbd rounded-xl px-5 py-1  bg-[#F7F8F8]">H1</kbd>
-                            <kbd id="H2"  class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">H2</kbd>
-                            <kbd id="H3"  class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">H3</kbd>
-                            <kbd id="H4"  class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">H4</kbd>
+                            <kbd onclick="seatChoose('H1')" id="H1" class="kbd rounded-xl px-5 py-1  bg-[#F7F8F8]">H1</kbd>
+                            <kbd onclick="seatChoose('H2')" id="H2"  class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">H2</kbd>
+                            <kbd onclick="seatChoose('H3')" id="H3"  class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">H3</kbd>
+                            <kbd onclick="seatChoose('H4')" id="H4"  class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">H4</kbd>
                           </div> 
                           <!-- i -->
                         <div class="flex justify-between gap-8 mt-6 my-1 w-full">
                             <kbd class="">I</kbd>
-                            <kbd id="I1" class="kbd rounded-xl px-5 py-1  bg-[#F7F8F8]">I1</kbd>
-                            <kbd id="I2" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">I2</kbd>
-                            <kbd id="I3" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">I3</kbd>
-                            <kbd id="I4" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">I4</kbd>
+                            <kbd onclick="seatChoose('I1')" id="I1" class="kbd rounded-xl px-5 py-1  bg-[#F7F8F8]">I1</kbd>
+                            <kbd onclick="seatChoose('I2')" id="I2" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">I2</kbd>
+                            <kbd onclick="seatChoose('I3')" id="I3" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">I3</kbd>
+                            <kbd onclick="seatChoose('I4')" id="I4" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">I4</kbd>
                           </div> 
                           <!-- j -->
                         <div class="flex justify-between gap-8 mt-6 my-1 w-full">
                             <kbd class="">J</kbd>
-                            <kbd id="J1" class="kbd rounded-xl px-5 py-1  bg-[#F7F8F8]">J1</kbd>
-                            <kbd id="J2" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">J2</kbd>
-                            <kbd id="J3" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">J3</kbd>
-                            <kbd id="J4" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">J4</kbd>
+                            <kbd onclick="seatChoose('J1')" id="J1" class="kbd rounded-xl px-5 py-1  bg-[#F7F8F8]">J1</kbd>
+                            <kbd onclick="seatChoose('J2')" id="J2" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">J2</kbd>
+                            <kbd onclick="seatChoose('J3')" id="J3" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">J3</kbd>
+                            <kbd onclick="seatChoose('J4')" id="J4" class="kbd rounded-xl px-5 py-1 bg-[#F7F8F8]">J4</kbd>
                           </div> 
                          
                     </div>
@@ -311,42 +325,40 @@
                             <!-- head -->
                             <thead>
                               <tr class="border-dashed">
-                                <th class="font-medium text-[#030712]">Seat<span class="bg-[#1DD100] rounded-xl px-2">2</span> </th>
+                                <th class="font-medium text-[#030712]">Seat<span id="booked-seat" class="bg-[#1DD100] rounded-xl px-2">0</span> </th>
                                 <th class="font-medium text-[#030712]">Class</th>
                                 <th class="font-medium text-[#030712]">Price</th>
                               </tr>
                             </thead>
-                            <tbody>
+                            <tbody id="seats-container">
                               <!-- row 1 -->
+                              
+                              <!-- row 2
                               <tr class="border-none">
                                 <td>C2</td>
                                 <td>Economoy</td>
                                 <td>550</td>
-                              </tr>
-                              <!-- row 2 -->
-                              <tr class="border-none">
-                                <td>C2</td>
-                                <td>Economoy</td>
-                                <td>550</td>
-                              </tr>
+                              </tr> -->
                              
                             </tbody>
                             <tfoot>
                                 <tr>
                                     <td class="text-base font-medium text-[#030712]">Total Price</td>
                                     <td></td>
-                                    <td class="text-base font-medium text-[#030712]">BDT 1100</td>
+                                    <td class="text-base font-medium text-[#030712]">BDT <span id="total-price">00</span></td>
                                 </tr>
                             </tfoot>
                           </table>
-                          <label class="mt-4 input input-bordered flex items-center gap-2 bg-[#FFFFFF] rounded-xl">
-                            <input type="text" class="grow" placeholder="Have any copupon?" />
-                            <button class="badge px-6 py-4 text-white rounded-xl bg-[#1DD100]">Apply</button>
+                          <label id="apply-copune" class="mt-4 input input-bordered flex items-center gap-2 bg-[#FFFFFF] rounded-xl hidden">
+                            <input id="copune-code" type="text" class="grow" placeholder="Have any copupon?" />
+                            <button id="btn-apply" class="badge px-6 py-4 text-white rounded-xl bg-[#1DD100]">Apply</button>
                           </label>
+                          <div class="mt-2" id="parcentage-show">
+                          </div>
 
                           <div class="mt-6 flex justify-between px-4">
                             <h4 class="font-medium">Grand Total</h4>
-                            <h4 class="font-medium">BDT 1100</h4>
+                            <h4  class="font-medium">BDT <span id="grand-total">00</span></h4>
                           </div>
                          
                     </div>
@@ -364,7 +376,7 @@
                             <div class="label">
                               <span class="label-text text-base text-[#030712] font-semibold">Phone Number*</span>
                             </div>
-                            <input type="number" placeholder="Enter your phone number" class="input input-bordered mt-2 bg-white w-full  rounded-2xl" />
+                            <input id="phone-number" type="number" placeholder="Enter your phone number" class="input input-bordered mt-2 bg-white w-full  rounded-2xl" />
                         </label>
 
                         <label class="form-control w-full  mt-2">
@@ -373,7 +385,7 @@
                             </div>
                             <input type="email" placeholder="Enter your email id" class="input input-bordered mt-2 bg-white w-full  rounded-2xl" />
                         </label>
-                        <button class="mt-3 text-xl font-extrabold btn btn-block rounded-2xl text-white bg-[#1DD100]">Next</button>
+                        <button onclick="my_modal_5.showModal()" id="btn-next" class="mt-3 text-xl font-extrabold btn btn-block rounded-2xl text-white bg-[#1DD100] hidden">Next</button>
                         <div class="flex gap-10 justify-center mt-6">
                             <a class="link link-neutral text-[#03071299]">Terms and Conditions</a>
                             <a class="link link-neutral text-[#03071299]">Cancellation Policy</a>
@@ -382,6 +394,24 @@
                 </div>
             </div>
         </section>
+
+        <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle p-16">
+            <div class="modal-box text-center">
+                <div class="flex justify-center mt-4">
+                    <img src="images/success.png" alt="">
+                </div>
+              <h3 class="font-bold text-2xl mt-2 text-[#27AE60]">SUCCESS</h3>
+              <p class="py-4 text-[#4A4A4A] text-xl font-medium">Thank you for Booking Our Bus Seats. 
+                We are working hard to find the best service and deals for you.</p>
+                <p>Shortly you will find a confirmation in your email.</p>
+              <div class="">
+                <form class="flex justify-center">
+                  <!-- if there is a button in form, it will close the modal -->
+                  <button class="btn mt-2 px-16  text-xl font-semibold rounded-2xl text-white bg-[#27AE60]">Continue</button>
+                </form>
+              </div>
+            </div>
+          </dialog>
     </main>
     <footer></footer>
 
